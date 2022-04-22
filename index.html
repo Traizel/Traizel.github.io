@@ -7,6 +7,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Global site tag (gtag.js) - Google Ads: 966372255 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-966372255"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'AW-966372255');
+		</script>
+		<!-- Event snippet for Join Discord conversion page
+		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+		<script>
+			function gtag_report_conversion(url) {
+  				var callback = function () {
+    			if (typeof(url) != 'undefined') {
+      				window.location = url;
+    			}
+  			};
+  			gtag('event', 'conversion', {
+      			'send_to': 'AW-966372255/MemgCPP_hbYDEJ_X5swD',
+      			'event_callback': callback
+  			});
+  			return false;
+					}
+		</script>
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
@@ -34,7 +59,7 @@
 							</li>
 							<!-- <li><a href="elements.html">Wiki</a></li> -->
 							<li>
-								<a target="_blank" href="https://discord.com/invite/qWssnBP" class="button primary">Discord</a>
+								<a target="_blank" href="https://discord.com/invite/qWssnBP" class="button primary" onclick="gtag_report_conversion(`www.traizelcraft.com`)">Discord</a>
 							</li>
 						</ul>
 					</nav>
@@ -97,7 +122,7 @@
 						</header>
 						<p>Along with that comes trust. Anyone, whether you just joined, are are a veteran, can apply for any position within the community. There are staff applications as well as non staff applications such as requests to join an SMP or become a collaborator.</p>
 						<ul class="actions">
-							<li><a target="_blank" href="https://discord.com/invite/qWssnBP" class="button">Learn More</a></li>
+							<li><a target="_blank" href="https://discord.com/invite/qWssnBP" class="button" onclick="gtag_report_conversion(`www.traizelcraft.com`)">Learn More</a></li>
 						</ul>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
@@ -162,7 +187,7 @@
 						</div>
 						<footer class="major">
 							<ul class="actions special">
-								<li><a target="_blank" href="https://discord.com/invite/qWssnBP" class="button">Join the community</a></li>
+								<li><a target="_blank" href="https://discord.com/invite/qWssnBP" class="button" onclick="gtag_report_conversion(`www.traizelcraft.com`)">Join the community</a></li>
 							</ul>
 						</footer>
 					</div>
