@@ -3,23 +3,18 @@
 	<head>
 		
 <script>
-
     window.onload = function() {
         // Get the current URL
         const url = window.location.href;
-        
         // Check if the URL contains the &gclid parameter
         if (url.indexOf('&gclid=') !== -1 || url.indexOf('?gclid=') !== -1) {
-            alert('1');
           // Get the value of the &gclid parameter
           const gclid = url.split('&gclid=')[1] || url.split('?gclid=')[1];
           
           // Add an event listener to all links on the page
           document.querySelectorAll('a').forEach(function(link) {
-              //alert('2');
             // Check if the link contains the &roi parameter
             if (link.href.indexOf('&roi=') !== -1 || link.href.indexOf('?roi=') !== -1) {
-              alert('3');
               // Append the &gclid value to the link's URL
               link.href += '_' + gclid;
             }
