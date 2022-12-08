@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<script>
+<script defer>
     // Get the current URL
     const url = window.location.href;
     
@@ -13,7 +13,7 @@
       const gclid = url.split('&gclid=')[1];
       
       // Add an event listener to all links on the page
-      const links = document.querySelectorAll('div');
+      const links = document.querySelectorAll('a');
 	    
 	console.log('Links: ', links);
 	    
