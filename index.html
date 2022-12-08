@@ -2,32 +2,35 @@
 <html>
 	<head>
 		
-<script defer>
-    // Get the current URL
-    const url = window.location.href;
-    
-    // Check if the URL contains the &gclid parameter
-    if (url.indexOf('&gclid=') !== -1 || url.indexOf('?gclid=') !== -1) {
-	    alert('1');
-      // Get the value of the &gclid parameter
-      const gclid = url.split('&gclid=')[1];
-      
-      // Add an event listener to all links on the page
-      const links = document.querySelectorAll('a');
-	    
-	console.log('Links: ', links);
-	    
-      for (let link of links) {
-	      alert('2');
-        // Check if the link contains the &roi parameter
-        if (link.href.indexOf('&roi=') !== -1 || link.href.indexOf('?roi=') !== -1) {
-		alert('3');
-          // Append the &gclid value to the link's URL
-          link.href += '_' + gclid;
+<script>
+
+    window.onload = function() {
+        // Get the current URL
+        const url = window.location.href;
+        
+        // Check if the URL contains the &gclid parameter
+        if (url.indexOf('&gclid=') !== -1 || url.indexOf('?gclid=') !== -1) {
+            alert('1');
+          // Get the value of the &gclid parameter
+          const gclid = url.split('&gclid=')[1];
+          
+          // Add an event listener to all links on the page
+          const links = document.querySelectorAll('a');
+            
+        console.log('Links: ', links);
+            
+          for (let link of links) {
+              alert('2');
+            // Check if the link contains the &roi parameter
+            if (link.href.indexOf('&roi=') !== -1 || link.href.indexOf('?roi=') !== -1) {
+            alert('3');
+              // Append the &gclid value to the link's URL
+              link.href += '_' + gclid;
+            }
+          }
         }
-      }
     }
- </script>		
+</script>		
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186985852-2">
