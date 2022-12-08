@@ -2,6 +2,26 @@
 <html>
 	<head>
 		
+<script>
+    // Get the current URL
+    var url = window.location.href;
+    
+    // Check if the URL contains the &gclid parameter
+    if (url.indexOf('&gclid=') !== -1) {
+      // Get the value of the &gclid parameter
+      var gclid = url.split('&gclid=')[1];
+      
+      // Add an event listener to all links on the page
+      document.querySelectorAll('a').forEach(function(link) {
+        // Check if the link contains the &roi parameter
+        if (link.href.indexOf('&roi=') !== -1) {
+          // Append the &gclid value to the link's URL
+          link.href += '_' + gclid;
+        }
+      });
+    }
+ </script>		
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186985852-2">
 </script>
@@ -80,7 +100,7 @@
 								<a href="downloads.html" class="button primary">Downloads</a>
 							</li>
 							<li>
-								<a target="_blank" href="http://shop.traizelcraft.net" class="button primary">Shop</a>
+								<a target="_blank" href="http://shop.traizelcraft.net&roi=3815673281" class="button primary">Shop</a>
 							</li>
 							<li>
 								<a target="_blank" href="https://traveler.fandom.com/wiki/The_Traveler_Universe_Wiki" class="button primary">Wiki</a>
