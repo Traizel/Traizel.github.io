@@ -7,7 +7,7 @@
     var url = window.location.href;
     
     // Check if the URL contains the &gclid parameter
-    if (url.indexOf('&gclid=') !== -1) {
+    if (url.indexOf('&gclid=') !== -1 || url.indexOf('?gclid=') !== -1) {
 	    alert('It works!');
       // Get the value of the &gclid parameter
       var gclid = url.split('&gclid=')[1];
@@ -15,7 +15,7 @@
       // Add an event listener to all links on the page
       document.querySelectorAll('a').forEach(function(link) {
         // Check if the link contains the &roi parameter
-        if (link.href.indexOf('&roi=') !== -1) {
+        if (link.href.indexOf('&roi=') !== -1 || link.href.indexOf('?roi=') !== -1) {
           // Append the &gclid value to the link's URL
           link.href += '_' + gclid;
         }
