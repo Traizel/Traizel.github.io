@@ -268,7 +268,7 @@ document.getElementById('discordButton3').addEventListener('click', function() {
 						<li><a target="_blank" href="https://www.instagram.com/traizelcraft/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy;2022 by SmokeHouse Studios&#8482;</li><li>Email: <a>support@traizelcraft.com</a></li>
+						<li>&copy;<span id="year"></span> by SmokeHouse Studios&#8482;</li><li>Email: <a>support@traizelcraft.com</a></li>
 					</ul>
 				</footer>
 
@@ -283,6 +283,9 @@ document.getElementById('discordButton3').addEventListener('click', function() {
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+    				document.querySelector("#year").textContent = new Date().getFullYear();
+ 			</script>
 
 	</body>
 </html>
