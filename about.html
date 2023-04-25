@@ -7,6 +7,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Global site tag (gtag.js) - Google Ads: 966372255 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-966372255"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'AW-966372255');
+		</script>
+		<!-- Event snippet for Join Discord conversion page
+		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+		<script>
+			function gtag_report_conversion(url) {
+  				var callback = function () {
+    			if (typeof(url) != 'undefined') {
+      				window.location = url;
+    			}
+  			};
+  			gtag('event', 'conversion', {
+      			'send_to': 'AW-966372255/MemgCPP_hbYDEJ_X5swD',
+      			'event_callback': callback
+  			});
+  			return false;
+					}
+		</script>
+		
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -38,7 +65,7 @@
 								<a target="_blank" href="https://bbqrew.shop" class="button primary">Merch</a>
 							</li>
 							<li>
-								<a target="_blank" href="https://discord.com/invite/qWssnBP" class="button primary" id="discordButton">Discord</a>
+								<a target="_blank" href="https://discord.com/invite/qWssnBP" class="button primary" id="discordButton" onclick="gtag_report_conversion(`www.traizelcraft.com`)">Discord</a>
 							</li>
 						</ul>
 					</nav>
@@ -61,7 +88,7 @@
 											<p>You can help us improve the server! If you find a bug or exploit, we have a channel on our discord that players can report in! Post anything wrong with the server in there. We also allow players to anonymously report other players of breaking rules and being toxic. Simply report the player in the same channel!</p>
 											<footer>
 												<ul class="actions">
-													<li><a target="_blank" href="https://discord.gg/vCfQfTwHbB" class="button" id="discordButton2">Discord Report Channel</a></li>
+													<li><a target="_blank" href="https://discord.gg/vCfQfTwHbB" class="button" id="discordButton2" onclick="gtag_report_conversion(`www.traizelcraft.com`)">Discord Report Channel</a></li>
 												</ul>
 											</footer>
 										</section>
@@ -132,6 +159,18 @@
 			<script>
     				document.querySelector("#year").textContent = new Date().getFullYear();
  			</script>
+			
+			<script type="text/javascript">
+				document.getElementById('discordButton').addEventListener('click', function() {
+  					fbq('track', 'Subscribe');
+				}, false);
+			</script>
+			
+			<script type="text/javascript">
+				document.getElementById('discordButton2').addEventListener('click', function() {
+  					fbq('track', 'Subscribe');
+				}, false);
+			</script>
 
 	</body>
 </html>
