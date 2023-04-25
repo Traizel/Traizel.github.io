@@ -7,6 +7,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Global site tag (gtag.js) - Google Ads: 966372255 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-966372255"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'AW-966372255');
+		</script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2526106576920424"
+     			crossorigin="anonymous"></script>
+	   
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-186985852-2">
+		</script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+  			gtag('config', 'UA-186985852-2');
+		</script>
+		<!-- Event snippet for Join Discord conversion page
+		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+		<script>
+			function gtag_report_conversion(url) {
+  				var callback = function () {
+    			if (typeof(url) != 'undefined') {
+      				window.location = url;
+    			}
+  			};
+  			gtag('event', 'conversion', {
+      			'send_to': 'AW-966372255/MemgCPP_hbYDEJ_X5swD',
+      			'event_callback': callback
+  			});
+  			return false;
+					}
+		</script>
+		
     </head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -38,7 +77,7 @@
 								<a target="_blank" href="https://bbqrew.shop" class="button primary">Merch</a>
 							</li>
 							<li>
-								<a target="_blank" href="https://discord.com/invite/qWssnBP" class="button primary" id="discordButton">Discord</a>
+								<a target="_blank" href="https://discord.com/invite/qWssnBP" class="button primary" id="discordButton" onclick="gtag_report_conversion(`www.traizelcraft.com`)">Discord</a>
 							</li>
 						</ul>
 					</nav>
@@ -298,6 +337,12 @@
 			<script>
     				document.querySelector("#year").textContent = new Date().getFullYear();
 	 		</script>
+			
+			<script type="text/javascript">
+				document.getElementById('discordButton).addEventListener('click', function() {
+  					fbq('track', 'Subscribe');
+				}, false);
+			</script>
 
 	</body>
 </html>
