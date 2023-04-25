@@ -7,6 +7,67 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Global site tag (gtag.js) - Google Ads: 966372255 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-966372255"></script>
+		
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2526106576920424"
+     			crossorigin="anonymous"></script>	
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-186985852-2">
+		</script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'UA-186985852-2');
+		</script>
+		
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'AW-966372255');
+		</script>
+		
+		<!-- Event snippet for Join Discord conversion page
+		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+		<script>
+			function gtag_report_conversion(url) {
+  				var callback = function () {
+    			if (typeof(url) != 'undefined') {
+      				window.location = url;
+    			}
+  			};
+  			gtag('event', 'conversion', {
+      			'send_to': 'AW-966372255/MemgCPP_hbYDEJ_X5swD',
+      			'event_callback': callback
+  			});
+  			return false;
+					}
+		</script>
+		
+		<!-- Meta Pixel Code -->
+		<script>
+ 			!function(f,b,e,v,n,t,s)
+  			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  			n.queue=[];t=b.createElement(e);t.async=!0;
+  			t.src=v;s=b.getElementsByTagName(e)[0];
+  			s.parentNode.insertBefore(t,s)}(window, document,'script',
+  			'https://connect.facebook.net/en_US/fbevents.js');
+  			fbq('init', '997067070949035');
+  			fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+  			src="https://www.facebook.com/tr?id=997067070949035&ev=PageView&noscript=1"/>
+		</noscript>
+		<!-- End Meta Pixel Code -->
+		
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
@@ -39,7 +100,7 @@
 							</li>
 							<!-- <li><a href="elements.html">Wiki</a></li> -->
 							<li>
-								<a target="_blank" href="https://discord.com/invite/qWssnBP" class="button primary">Discord</a>
+								<a target="_blank" href="https://discord.com/invite/qWssnBP" class="button primary" id="discordButton" onclick="gtag_report_conversion(`www.traizelcraft.com`)">Discord</a>
 							</li>
 						</ul>
 					</nav>
@@ -109,7 +170,7 @@
 						</header>
 						<p>You can visit our <a target="_blank" href="https://traveler.fandom.com">Wiki</a> for more information on the story. The RPG has more beyond the story and lore. There are difficult dungeons, unique parkour maps, mazes, tons of quests to complete, secrets to find, and many survival maps to build your dream home!</p>
 						<ul class="actions">
-							<li><a target="_blank" href="https://discord.com/invite/qWssnBP" class="button">Learn More</a></li>
+							<li><a target="_blank" href="https://discord.com/invite/qWssnBP" class="button" id="discordButton2" onclick="gtag_report_conversion(`www.traizelcraft.com`)">Learn More</a></li>
 						</ul>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
@@ -174,7 +235,7 @@
 						</div>
 						<footer class="major">
 							<ul class="actions special">
-								<li><a target="_blank" href="https://discord.com/invite/qWssnBP" class="button">Join the community</a></li>
+								<li><a target="_blank" href="https://discord.com/invite/qWssnBP" class="button" id="discordButton3" onclick="gtag_report_conversion(`www.traizelcraft.com`)">Join the community</a></li>
 							</ul>
 						</footer>
 					</div>
@@ -216,6 +277,24 @@
 			<script>
     				document.querySelector("#year").textContent = new Date().getFullYear();
  			</script>
+			
+			<script type="text/javascript">
+				document.getElementById('discordButton').addEventListener('click', function() {
+  					fbq('track', 'Subscribe');
+				}, false);
+			</script>
+			
+			<script type="text/javascript">
+				document.getElementById('discordButton2').addEventListener('click', function() {
+  					fbq('track', 'Subscribe');
+				}, false);
+			</script>
+			
+			<script type="text/javascript">
+				document.getElementById('discordButton3').addEventListener('click', function() {
+  					fbq('track', 'Subscribe');
+				}, false);
+			</script>
 
 	</body>
 </html>
